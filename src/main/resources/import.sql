@@ -1,0 +1,10 @@
+insert into tb_client(name, cpf, children, income, birth_date) values ('Ivan', '07399999999', 1, 123.0, '1989-08-29');
+insert into tb_client(name, cpf, children, income, birth_date) values ('Ivan', '07399999999', 1, 123.0, '1989-08-29');
+insert into tb_client(name, cpf, children, income, birth_date) values ('Ivan', '07399999999', 1, 123.0, '1989-08-29');
+insert into tb_client(name, cpf, children, income, birth_date) values ('Ivan', '07399999999', 1, 123.0, '1989-08-29');
+insert into tb_client(name, cpf, children, income, birth_date) values ('Ivan', '07399999999', 1, 123.0, '1989-08-29');
+insert into tb_client(name, cpf, children, income, birth_date) values ('Ivan', '07399999999', 1, 123.0, '1989-08-29');
+insert into tb_client(name, cpf, children, income, birth_date) values ('Ivan', '07399999999', 1, 123.0, '1989-08-29');
+insert into tb_client(name, cpf, children, income, birth_date) values ('Ivan', '07399999999', 1, 123.0, '1989-08-29');
+insert into tb_client(name, cpf, children, income, birth_date) values ('Ivan', '07399999999', 1, 123.0, '1989-08-29');
+insert into tb_client(name, cpf, children, income, birth_date) values ('Ivan', '07399999999', 1, 123.0, '1989-08-29');

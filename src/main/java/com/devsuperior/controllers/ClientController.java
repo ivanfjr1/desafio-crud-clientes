@@ -3,24 +3,23 @@ package com.devsuperior.controllers;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import com.devsuperior.Dto.ClientDto;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.ErrorResponseException;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.devsuperior.entities.Client;
 import com.devsuperior.services.ClientService;
 
 import lombok.RequiredArgsConstructor;
 
+@Validated
 @RestController
 @RequestMapping(value = "/clients")
 @RequiredArgsConstructor
@@ -29,8 +28,8 @@ public class ClientController {
 	private final ClientService clientService;
 
 	@PostMapping(value = "", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Client> save(@RequestBody Client client) {
-		Client clientSaved = clientService.save(client);
+	public ResponseEntity<Client> save(@Valid @RequestBody ClientDto clientDto) {
+		Client clientSaved = clientService.save(clientDto);
 
 		final HttpHeaders httpHeaders = new HttpHeaders();
 		httpHeaders.setContentType(MediaType.APPLICATION_JSON);
@@ -59,6 +58,15 @@ public class ClientController {
 		final HttpHeaders httpHeaders = new HttpHeaders();
 	    httpHeaders.setContentType(MediaType.APPLICATION_JSON);
 		return new ResponseEntity<>(clients, httpHeaders, HttpStatus.OK);
+	}
+
+	@DeleteMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<List<Client>> deleteById(@PathVariable Long id) {
+		clientService.deleteById(id);
+
+		final HttpHeaders httpHeaders = new HttpHeaders();
+		httpHeaders.setContentType(MediaType.APPLICATION_JSON);
+		return new ResponseEntity<>(httpHeaders, HttpStatus.OK);
 	}
 
 }
