@@ -50,7 +50,7 @@ public class ClientController {
 	}
 
 	@PutMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<ClientDto> update(@PathVariable Long id, @RequestBody ClientDto clientDto) {
+	public ResponseEntity<ClientDto> update( @PathVariable Long id, @Valid @RequestBody ClientDto clientDto) {
 		clientDto = clientService.update(id, clientDto);
 		return ResponseEntity.ok(clientDto);
 	}

@@ -1,7 +1,6 @@
 package com.devsuperior.dto;
 
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.PastOrPresent;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,8 +13,7 @@ public class ClientDto {
 
     private Long id;
 
-    @NotEmpty
-    @NotNull(message = "Campo name obrigatório!")
+    @NotBlank(message = "Campo name obrigatório!")
     private String name;
 
     private String cpf;
