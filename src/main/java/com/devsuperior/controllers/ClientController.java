@@ -1,20 +1,14 @@
 package com.devsuperior.controllers;
 
 import java.net.URI;
-import java.time.Instant;
-import java.util.NoSuchElementException;
 
 import com.devsuperior.dto.ClientDto;
-import com.devsuperior.dto.CustomError;
-import com.devsuperior.services.exceptions.ResourceNotFoundException;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.ErrorResponseException;
 import org.springframework.web.bind.annotation.*;
 
 import com.devsuperior.services.ClientService;

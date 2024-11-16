@@ -1,4 +1,4 @@
-insert into tb_client(name, cpf, children, income, birth_date) values ('Ivan', '07399999999', 1, 5000.0, '1989-08-29');
+insert into tb_client(name, cpf, children, income, birth_date) values ('Ivan', '169.663.650-76', 1, 5000.0, '1989-08-29');
 insert into tb_client(name, cpf, children, income, birth_date) values ('Larissa Cunha Melo', '917.350.811-08', 3, 2000.0, '1999-02-08');
 insert into tb_client(name, cpf, children, income, birth_date) values ('Luís Azevedo Rodrigues', '650.274.891-02', 2, 7000.0, '1947-09-13');
 insert into tb_client(name, cpf, children, income, birth_date) values ('Lara Rocha Rodrigues', '728.186.583-06', 2, 3500.0, '1945-08-01');

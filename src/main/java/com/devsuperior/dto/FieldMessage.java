@@ -8,6 +8,6 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class FieldMessage {
-    private String fieldNamse;
+    private String fieldName;
     private String message;
 }

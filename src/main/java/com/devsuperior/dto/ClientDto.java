@@ -13,14 +13,14 @@ public class ClientDto {
 
     private Long id;
 
-    @NotBlank(message = "Campo name obrigatório!")
+    @NotBlank(message = "Campo nome obrigatório!")
     private String name;
 
     private String cpf;
 
     private Double income;
 
-    @PastOrPresent(message = "Não pode ser informado uma data futura")
+    @PastOrPresent(message = "Não pode ser informado uma data futura!")
     private LocalDate birthDate;
 
     private Integer children;
